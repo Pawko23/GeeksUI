@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/594a9a3356.js" crossorigin="anonymous"></script>
     <title>Practise</title>
 </head>
 <body>
     <header>
         <nav class="navbar">
             <ul class="navbar__list">
-                <li class="navbar__item"><a>GeeksUI</a></li>
-                <li class="navbar__item navbar__item--has-submenu">Landings <span class="navbar__icon">&#9662;</span></li>
-                <li class="navbar__item navbar__item--has-submenu">Pages <span class="navbar__icon">&#9662;</span></li>
-                <li class="navbar__item navbar__item--has-submenu">Accounts <span class="navbar__icon">&#9662;</span></li>
+                <li class="navbar__item"><a class="navbar__link" href="#"><i class="fa-brands fa-uikit"></i></a></li>
+                <li class="navbar__item navbar__item--has-submenu">Landings <span class="navbar__icon"><i class="fa-solid fa-angle-down"></i></span></li>
+                <li class="navbar__item navbar__item--has-submenu">Pages <span class="navbar__icon"><i class="fa-solid fa-angle-down"></i></span></li>
+                <li class="navbar__item navbar__item--has-submenu">Accounts <span class="navbar__icon"><i class="fa-solid fa-angle-down"></i></span></li>
                 <li class="navbar__item"><a class="navbar__link" href="#">Dashboard</a></li>
-                <li class="navbar__item navbar__item--has-submenu"><a class="navbar__link" href="#">Docs <span class="navbar__icon">&#9662;</span></a></li>
+                <li class="navbar__item navbar__item--has-submenu"><a class="navbar__link" href="#">Docs <span class="navbar__icon"><i class="fa-solid fa-angle-down"></i></span></a></li>
             </ul>
+            <button class="navbar__btn-buy navbar__btn-buy--primary"><i class="fa-solid fa-cart-shopping"></i><span>Buy Geeks</span></button>
         </nav>
     </header>
     <main>
@@ -26,8 +32,8 @@
                     <p class="welcome__description">Geeks UI Premium LMS education HTML template, perfect for online courses, colleges, schools, training hubs, and corporate programs. Enhance your educational platform with seamless design and advanced features for modern learning.</p>
                 </div>
                 <div class="welcome__btn-box">
-                    <button class="welcome__button welcom__button--primary">Buy Geeks</button>
-                    <button class="welcome__button welcom__button--secondary">Preview</button>
+                    <button class="welcome__button welcome__button--primary">Buy Geeks</button>
+                    <button class="welcome__button welcome__button--secondary">Preview</button>
                 </div>
                 <div class="welcome__rating">
                     <p class="welcome__rating-score">5.0</p>
