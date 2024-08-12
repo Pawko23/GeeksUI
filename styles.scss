@@ -46,15 +46,20 @@ body {
         position: relative;
         margin-left: 5px;
         padding: 5px;
-        cursor: pointer;
         line-height: 1;
+        cursor: pointer;
 
         &--has-submenu {
-            &:hover .navbar__submenu {
+            &:hover .navbar__submenu--bottom {
                 @include flexbox(column, flex-start, flex-start);
                 opacity: 1;
                 visibility: visible;
                 transform: translateY(0);
+            }
+            &:hover .navbar__submenu--bottom > .navbar__submenu-list > .navbar__submenu-item:hover .navbar__submenu--right{
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0);
             }
         }
     }
@@ -80,6 +85,8 @@ body {
         color: #fff; 
         font-weight: bold;
         cursor: pointer;
+        transition: background-color 0.3s ease;
+
         i, span {
             margin: 2px auto;
             padding: 3px 1px;
@@ -87,23 +94,46 @@ body {
         i {
             font-size: 1rem;
         }
+
+        &:hover {
+            background-color: #6343d8;
+        }
     }
 
     &__submenu {
         position: absolute;
         background-color: #fff;
-        box-shadow: 0px 0px 5px #000;
+        box-shadow: 0px 0px 5px #ccc;
         border-radius: 5px;
-        top: 100%;
-        left: 0;
         width: 200%;
         z-index: 1000;
-
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(10px);
         transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-    
+        
+        &--bottom, &--right {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+        }
+        
+        &-item {
+            padding: 10px;
+            color: #000;
+        }
+
+        &--bottom {
+            top: 110%;
+            left: 0;
+            width: 200%;
+            transform: translateY(10px);
+        }
+
+        &--right {
+            top: 0;
+            left: 100%;
+            width: 100%;
+            transform: translateX(10px);
+        }
+
         &-title {
             padding: 10px;
             margin-top: 15px;
@@ -114,17 +144,15 @@ body {
             list-style: none;
             width: 100%;
         }
-    
-        &-item {
-            padding: 10px;
-            &:hover {
-                color: #754FFE;
-                background-color: rgb(183, 232, 247);
-            }
-        }
 
         &-link {
             text-decoration: none;
         }
+    }
+
+    .navbar__submenu--bottom .navbar__submenu-list .navbar__submenu-item:hover,
+    .navbar__submenu--right .navbar__submenu-list .navbar__submenu-item:hover {
+        color: #754FFE;
+        background-color: rgb(183, 232, 247);
     }
 }
