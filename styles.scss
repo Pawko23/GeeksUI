@@ -10,7 +10,7 @@ html {
 }
 
 body {
-
+    background: #fff;
 }
 
 .fa-angle-down {
@@ -56,11 +56,19 @@ body {
                 visibility: visible;
                 transform: translateY(0);
             }
+
             &:hover .navbar__submenu--bottom > .navbar__submenu-list > .navbar__submenu-item:hover .navbar__submenu--right{
                 opacity: 1;
                 visibility: visible;
                 transform: translateX(0);
             }
+
+            &:hover .navbar__submenu--right > .navbar__submenu-list > .navbar__submenu-item:hover .navbar__submenu--right-lowest {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0);
+            }
+
         }
     }
 
@@ -109,7 +117,7 @@ body {
         z-index: 1000;
         transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
         
-        &--bottom, &--right {
+        &--bottom, &--right, &--right-lowest {
             opacity: 0;
             visibility: hidden;
             transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
@@ -119,6 +127,10 @@ body {
             position: relative;
             padding: 10px;
             color: #000;
+
+            &-box {
+                @include flexbox(row, center, center);
+            }
         }
 
         &--bottom {
@@ -135,10 +147,37 @@ body {
             transform: translateX(10px);
         }
 
-        &-title {
-            padding: 10px;
-            margin-top: 15px;
+        &--right-lowest {
+            top: 0;
+            left: 100%;
+            width: 100%;
+            transform: translateX(10px);
         }
+
+        &--docs {
+            width: 500%;
+        }
+
+        &-title--bottom, &-title--right {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            padding: 5px;
+            margin: 5px;
+            color: #64748b;
+            letter-spacing: 1px;
+        }
+
+        &-title--right {
+            color: #000;
+        }
+
+        &-description {
+            color: #64748b;
+            padding: 5px;
+            margin: 5px;
+            font-size: 1.3rem;
+        }
+
     
         &-list {
             margin-bottom: 10px;
@@ -148,6 +187,12 @@ body {
 
         &-link {
             text-decoration: none;
+        }
+
+        i {
+            position: absolute;
+            right: 10%;
+            font-size: 1.1rem;
         }
     }
 
