@@ -14,3 +14,7 @@ I am building this project to:
 ## Attribution
 
 The original theme design and asssets are created by **Codescandy**. I do not claim any ownership of the original design or assets. This project is solely for educational purposes, not intended for commercial use. All credit for the original design and functionality goes to **Codescandy**. 
+
+## How to use
+
+In order to see the look of the web page, clone the repo with ```git clone https://github.com/Pawko23/GeeksUI.git``` and open the index.html file.
