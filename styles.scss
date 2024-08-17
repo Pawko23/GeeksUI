@@ -1,3 +1,6 @@
+$primary-color: #754ffe;
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -69,6 +72,10 @@ body {
                 transform: translateX(0);
             }
 
+        }
+
+        &:hover {
+            color: $primary-color;
         }
     }
 
@@ -142,6 +149,15 @@ body {
                     margin-left: 20px;
                     font-size: 1.4rem;
                 }
+
+                &-title {
+                    font-weight: 500;
+                }
+
+                &-description {
+                    margin-top: 5px;
+                    font-size: 1.2rem;
+                }
             }
 
             &--blue {
@@ -151,8 +167,24 @@ body {
             &--blue:hover{
                 background-color: #f1f5f9;
             }
+
+            &:hover {
+                color: $primary-color;
+                background-color: #f1f5f9;
+            }
         }
 
+        &-break {
+            @include flexbox;
+            width: 100%;
+            hr {
+                margin: 10px;
+                width: 90%;
+                border: 0;
+                background: none;
+                border-top: 1px solid #e2e8f0;
+            }
+        }
 
         &--bottom {
             top: 110%;
@@ -177,6 +209,13 @@ body {
 
         &--docs {
             width: 500%;
+            color: #000;
+
+            i {
+                color: $primary-color;
+                font-size: 2rem;
+            }
+
         }
 
         &-title--bottom, &-title--right {
@@ -217,9 +256,9 @@ body {
         }
     }
 
-    .navbar__submenu--bottom .navbar__submenu-list .navbar__submenu-item:hover,
-    .navbar__submenu--right .navbar__submenu-list .navbar__submenu-item:hover {
-        color: #754FFE;
-        background-color: #e2e8f0;
+    .navbar__submenu--bottom > .navbar__submenu-list > .navbar__submenu-item:hover,
+    .navbar__submenu--right > .navbar__submenu-list > .navbar__submenu-item:hover {
+        color: $primary-color;
+        background-color: #f1f5f9;
     }
 }
