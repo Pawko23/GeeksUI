@@ -1,4 +1,4 @@
-# GeeksUi - Boostrap Theme Recreation
+# Geeks UI - Bootstrap Theme Recreation
 
 ## Overview
 
