@@ -79,8 +79,8 @@ body {
     }
 
     &__btn-buy {
-        @include btn-primary();
         margin: 0.5rem;
+        @include btn-primary();
     }
 
     &__list {
@@ -206,8 +206,7 @@ body {
             font-size: 1.1rem;
         }
 
-        &-title--bottom {
-            color: $item-grey;
+        &-title--bottom, &-title--right {
             padding: 0.8rem;
             letter-spacing: 0.1rem;
             margin-top: 0.5rem;
@@ -215,13 +214,12 @@ body {
             text-transform: uppercase;
         }
 
+        &-title--bottom {
+            color: $item-grey;
+        }
+
         &-title--right {
             color: $black-default;
-            padding: 0.8rem;
-            letter-spacing: 0.1rem;
-            margin-top: 0.5rem;
-            font-weight: 500;
-            text-transform: uppercase;
         }
 
         &-description {
@@ -243,7 +241,6 @@ body {
 
 @media(min-width: 992px) {
     .navbar {
-        position: relative;
         @include flexbox(row, space-evenly, center);
         height: 7rem;
         padding: 0 2rem;
@@ -331,34 +328,26 @@ body {
                 color: $black-default;
             }
     
-            &--right {
+            &--right, &--right-lowest {
                 top: 0;
                 left: 100%;
                 width: 100%;
             }
-    
-            &--right-lowest {
-                top: 0;
-                left: 100%;
-                width: 100%;
-            }
-    
-            &-title--bottom {
-                color: $item-grey;
+
+            &-title--bottom, &-title--right {
                 padding: 1rem;
                 letter-spacing: 0.1rem;
                 margin-top: 0.5rem;
                 font-weight: 500;
                 text-transform: uppercase;
+            } 
+    
+            &-title--bottom {
+                color: $item-grey;
             }
     
             &-title--right {
                 color: $black-default;
-                padding: 1rem;
-                letter-spacing: 0.1rem;
-                margin-top: 0.5rem;
-                font-weight: 500;
-                text-transform: uppercase;
             }
     
             &-description {
@@ -466,20 +455,12 @@ body {
         }
     
         &__btn-buy {
-            @include btn-primary();
             margin-left: 25rem;
+            @include btn-primary();
         }
     
         &__burger-btn {
-            position: absolute;
             display: none;
-            top: 1rem;
-            right: 1rem;
-            border: 0.1rem solid $item-grey;
-            border-radius: 0.5rem;
-            width: 4rem;
-            background-color: transparent;
-            cursor: pointer;
         }
     
         &__burger-icon {
