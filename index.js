@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     burgerBtn.addEventListener('click', () => {
       navbarList.classList.toggle('active');
-      console.log('Clicked!')
     });
 
     const closeNavbarItems = () => {
@@ -30,19 +29,18 @@ document.addEventListener('DOMContentLoaded', function () {
   
     navbarItems.forEach(item => {
       item.addEventListener('click', function (e) {
-        e.stopPropagation(e);
+        e.stopPropagation();
         const isActive = this.classList.contains('active');
         closeNavbarItems();
         if(!isActive) {
           this.classList.add('active');
         }
-        console.log('Clicked navitem')
       });
     });
 
     submenuItems.forEach(item => {
         item.addEventListener('click', function (e) {
-          e.stopPropagation(e);
+          e.stopPropagation();
           const isActive = this.classList.contains('active');
           closeSubmenuItems();
 
@@ -55,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     quizItems.forEach(item => {
       item.addEventListener('click', function (e) {
-        e.stopPropagation(e);
+        e.stopPropagation();
         const isActive = this.classList.contains('active');
         closeQuizItems();
 
