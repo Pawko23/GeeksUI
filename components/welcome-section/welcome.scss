@@ -8,6 +8,7 @@ $box-shadow-color: #cccccc;
 $item-grey: #64748b;
 $bg-hover: #f1f5f9;
 $border-color: #94a3b8;
+$border-bottom-color: #cbd5e1;
 $secondary-btn-color: #334155;
 $secondary-btn-hover: #f1f5f9;
 $star-color: rgb(245, 158, 11);
@@ -138,6 +139,7 @@ $star-color: rgb(245, 158, 11);
     &__features {
         margin: 2rem;
         width: 100%;
+        border-bottom: 1px solid $border-bottom-color;
         &-box {
             margin: 2rem 0;
             @include flexbox(row, center, flex-start);
@@ -168,11 +170,13 @@ $star-color: rgb(245, 158, 11);
         }
 
         &-title {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
         }
 
         &-description {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
+            width: 80%;
+            color: $secondary-btn-color;
         }
     }
 }
