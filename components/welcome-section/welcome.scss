@@ -108,7 +108,7 @@ $star-color: rgb(245, 158, 11);
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 1.5rem;
+        margin: 1.5rem auto;
     
         &-score, &-description {
             margin: 0.2rem;
