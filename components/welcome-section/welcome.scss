@@ -59,7 +59,7 @@ $star-color: rgb(245, 158, 11);
 
 .welcome {
     @include flexbox(column, center, center);
-    margin: 2rem 1rem;
+    margin: 2rem;
     text-align: center;
 
     &__box, &__description {
@@ -99,7 +99,7 @@ $star-color: rgb(245, 158, 11);
     }
 
     &__preview-icon {
-        margin-left: 5px;
+        margin-left: 0.5rem;
     }
 
 
@@ -131,28 +131,25 @@ $star-color: rgb(245, 158, 11);
 
     &__star-icon {
         font-size: 1.1rem;
-        margin-right: 5px;
+        margin-right: 0.5rem;
         color: $star-color;
     }
 
     &__features {
-        margin: 20px auto;
+        margin: 2rem;
         width: 100%;
         &-box {
-            margin: 20px 0;
-            display: flex;
-            align-items: flex-start;
+            margin: 2rem 0;
+            @include flexbox(row, center, flex-start);
         }
 
         &-icon {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flexbox(row, center, center);
             background-color: $primary-light;
-            min-width: 48px;
-            height: 48px;
+            min-width: 4.8rem;
+            height: 4.8rem;
             flex-shrink: 0;
-            border-radius: 10px;
+            border-radius: 1rem;
             &--shapes, &--mobile, &--moon {
                 font-size: 2rem;
                 color: $primary-dark;
@@ -161,13 +158,13 @@ $star-color: rgb(245, 158, 11);
         }
 
         &-info {
-            margin-left: 15px;
+            margin-left: 1.5rem;
             text-align: left;
             flex-grow: 1;
         }
 
         &-title, &-description {
-            padding: 5px;
+            padding: 0.5rem;
         }
 
         &-title {
@@ -176,6 +173,40 @@ $star-color: rgb(245, 158, 11);
 
         &-description {
             font-size: 1.3rem;
+        }
+    }
+}
+
+@media(min-width: 572px) {
+    .welcome {
+        &__features {
+            width: 90%;
+        }
+    }
+}
+
+@media(min-width: 992px) {
+    .welcome {
+        &__box {
+            margin-top: 5rem;
+            width: 50%;
+        }
+        &__features {
+            @include flexbox(row, center, flex-start);
+            width: 100%;
+            padding: 1rem;
+            &-box {
+                margin: 2rem 1rem;
+            }
+        }
+    }
+}
+
+@media(min-width: 1200px) {
+    .welcome {
+        &__features {
+            width: 80%;
+            margin-top: 15rem;
         }
     }
 }
