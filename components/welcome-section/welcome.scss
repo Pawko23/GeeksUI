@@ -1,4 +1,6 @@
 $primary-color: #754ffe;
+$primary-dark: #593cc1;
+$primary-light: #e3dcff;
 $secondary-color: #6343d8;
 $white-default: #ffffff;
 $black-default: #000000;
@@ -131,5 +133,49 @@ $star-color: rgb(245, 158, 11);
         font-size: 1.1rem;
         margin-right: 5px;
         color: $star-color;
+    }
+
+    &__features {
+        margin: 20px auto;
+        width: 100%;
+        &-box {
+            margin: 20px 0;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        &-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $primary-light;
+            min-width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            &--shapes, &--mobile, &--moon {
+                font-size: 2rem;
+                color: $primary-dark;
+                z-index: 1;
+            }
+        }
+
+        &-info {
+            margin-left: 15px;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        &-title, &-description {
+            padding: 5px;
+        }
+
+        &-title {
+            font-size: 1.5rem;
+        }
+
+        &-description {
+            font-size: 1.3rem;
+        }
     }
 }
