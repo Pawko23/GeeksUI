@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is built for a personal learning purposes. I am here recreating a Boostrap theme - [Geeks UI](https://geeksui.codescandy.com/index.html?fbclid=IwY2xjawEmsvlleHRuA2FlbQIxMAABHei2utnh7a71sRMc_ahcDLCNX0t2_ArFqL0D0kvCWY9PCoOgVaD5jvAH6g_aem_kdlKv0XCUPLIevjN1pK0hA) - from **Codescandy** in order to improve my front-end development skills. The goal is to replicate the theme's design and functionality as closely as possible with usage of **HTML**, **SASS**, **JavaScript**, followed by **BEM** methodology and **Progressive Enhancement** principles.
+This project is built for a personal learning purposes. I am here recreating a Boostrap theme - [Geeks UI](https://geeksui.codescandy.com/index.html?fbclid=IwY2xjawEmsvlleHRuA2FlbQIxMAABHei2utnh7a71sRMc_ahcDLCNX0t2_ArFqL0D0kvCWY9PCoOgVaD5jvAH6g_aem_kdlKv0XCUPLIevjN1pK0hA) - from **Codescandy** in order to improve my front-end development skills. The goal is to replicate the theme's design and functionality as closely as possible with usage of **HTML**, **SASS**, **JavaScript**, followed by **BEM** methodology and **Progressive Enhancement** principles. The different appearance of the navigation bar is due to the changes that were applied in the original theme during this project development.
 
 ## Purpose
 
