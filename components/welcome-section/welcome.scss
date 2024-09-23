@@ -1,0 +1,279 @@
+$primary-color: #754ffe;
+$primary-dark: #593cc1;
+$primary-light: #e3dcff;
+$secondary-color: #6343d8;
+$white-default: #ffffff;
+$black-default: #000000;
+$box-shadow-color: #cccccc;
+$item-grey: #64748b;
+$bg-hover: #f1f5f9;
+$border-color: #94a3b8;
+$border-bottom-color: #cbd5e1;
+$secondary-btn-color: #334155;
+$secondary-btn-hover: #f1f5f9;
+$star-color: rgb(245, 158, 11);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin flexbox($flex-direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin btn-primary($border-radius: 0.3rem) {
+    padding: 1.5rem;
+    width: 13rem;
+    background-color: $primary-color;
+    color: $white-default;
+    border: none;
+    border-radius: $border-radius;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $secondary-color;
+    }
+}
+
+@mixin btn-secondary($border-radius: 0.3rem) {
+    padding: 1.5rem;
+    width: 11rem;
+    background-color: transparent;
+    color: $secondary-btn-color;
+    border: 0.05rem solid $border-color;
+    border-radius: $border-radius;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $secondary-btn-hover;
+    }
+}
+
+.welcome {
+    position: relative;
+    @include flexbox(column, center, center);
+    margin: 0 0 2rem 0;
+    text-align: center;
+    width: 100%;
+
+    &__box, &__description {
+        padding: 1rem;
+    }
+
+    &__box {
+        @include flexbox(column, center, center);
+        margin-top: 5rem;
+    }
+
+    &__title {
+        font-size: 3rem;
+        width: 75%;
+    }
+
+    &__geeks-span {
+        color: $primary-color;
+    }
+
+    &__description {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+
+
+    &__btn-box {
+        margin: 1.5rem;
+    }
+
+    &__button {
+        margin: 0 0.5rem;
+        padding: 1.5rem 2.5rem;
+        cursor: pointer;
+
+        &--primary {
+            @include btn-primary();
+        }
+
+        &--secondary {
+            @include btn-secondary();
+        }
+    }
+
+    &__preview-icon {
+        margin-left: 0.5rem;
+    }
+
+
+    &__rating {
+        @include flexbox();
+        margin: 1.5rem auto;
+    
+        &-score, &-description {
+            margin: 0.2rem;
+            padding: 0.5rem 1rem;
+        }
+
+        &-score {
+            font-size: 1.1rem;
+            border: 0.1rem solid $border-color;
+            border-radius: 0.3rem;
+        }
+
+        &-description {
+            font-size: 1.5rem;
+        }
+
+        &-stats {
+            font-weight: 700;
+        }
+    }
+
+    &__star-icon {
+        font-size: 1.1rem;
+        margin-right: 0.5rem;
+        color: $star-color;
+    }
+
+    &__features {
+        margin: 5rem;
+        padding: 2rem;
+        width: 100%;
+        border-bottom: 1px solid $border-bottom-color;
+        &-box {
+            margin: 2rem 0;
+            @include flexbox(row, center, flex-start);
+        }
+
+        &-icon {
+            @include flexbox(row, center, center);
+            background-color: $primary-light;
+            min-width: 4.8rem;
+            height: 4.8rem;
+            flex-shrink: 0;
+            border-radius: 1rem;
+            &--shapes, &--mobile, &--moon {
+                font-size: 2rem;
+                color: $primary-dark;
+                z-index: 1;
+            }
+        }
+
+        &-info {
+            margin-left: 1.5rem;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        &-title, &-description {
+            padding: 0.5rem;
+        }
+
+        &-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        &-description {
+            font-size: 1.5rem;
+            width: 80%;
+            color: $secondary-btn-color;
+        }
+    }
+}
+
+@media(min-width: 572px) {
+    .welcome {
+        &__title {
+            font-size: 3.5rem;
+        }
+
+        &__description {
+            font-size: 1.7rem;
+        }
+
+        &__rating {
+            &-score {
+                font-size: 1.3rem;
+            }
+            &-description {
+                font-size: 1.7rem;
+            }
+        }
+
+        &__star {
+            &-icon {
+                font-size: 1.3rem;
+            }
+        }
+
+        &__features {
+            width: 90%;
+        }
+    }
+}
+
+@media(min-width: 992px) {
+    .welcome {
+        &__box {
+            width: 50%;
+        }
+
+        &__title {
+            font-size: 4rem;
+            margin-top: 10rem;
+        }
+
+        &__description {
+            font-size: 2rem;
+        }
+
+        &__rating {
+            &-score {
+                font-size: 1.5rem;
+            }
+            &-description {
+                font-size: 2rem;
+            }
+        }
+
+        &__star {
+            &-icon {
+                font-size: 1.5rem;
+            }
+        }
+
+        &__features {
+            @include flexbox(row, center, flex-start);
+            width: 100%;
+            padding: 1rem;
+            margin: 15rem 0;
+            &-box {
+                margin: 2rem 1rem;
+            }
+
+            &-title {
+                font-size: 1.8rem;
+            }
+
+            &-description {
+                font-size: 1.7rem;
+            }
+        }
+    }
+}
+
+@media(min-width: 1200px) {
+    .welcome {
+        &__features {
+            width: 80%;
+        }
+    }
+}
