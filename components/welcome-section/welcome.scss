@@ -113,9 +113,7 @@ $star-color: rgb(245, 158, 11);
 
 
     &__rating {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexbox();
         margin: 1.5rem auto;
     
         &-score, &-description {
@@ -193,9 +191,27 @@ $star-color: rgb(245, 158, 11);
 
 @media(min-width: 572px) {
     .welcome {
-
         &__title {
             font-size: 3.5rem;
+        }
+
+        &__description {
+            font-size: 1.7rem;
+        }
+
+        &__rating {
+            &-score {
+                font-size: 1.3rem;
+            }
+            &-description {
+                font-size: 1.7rem;
+            }
+        }
+
+        &__star {
+            &-icon {
+                font-size: 1.3rem;
+            }
         }
 
         &__features {
@@ -215,6 +231,25 @@ $star-color: rgb(245, 158, 11);
             margin-top: 10rem;
         }
 
+        &__description {
+            font-size: 2rem;
+        }
+
+        &__rating {
+            &-score {
+                font-size: 1.5rem;
+            }
+            &-description {
+                font-size: 2rem;
+            }
+        }
+
+        &__star {
+            &-icon {
+                font-size: 1.5rem;
+            }
+        }
+
         &__features {
             @include flexbox(row, center, flex-start);
             width: 100%;
@@ -222,6 +257,14 @@ $star-color: rgb(245, 158, 11);
             margin: 15rem 0;
             &-box {
                 margin: 2rem 1rem;
+            }
+
+            &-title {
+                font-size: 1.8rem;
+            }
+
+            &-description {
+                font-size: 1.7rem;
             }
         }
     }
