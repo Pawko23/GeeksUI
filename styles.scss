@@ -85,7 +85,7 @@ body {
 
     &__list {
         position: relative;
-        margin-top: 2rem;
+        margin-top: 5rem;
         display: block;
         width: 100%;
         background-color: $white-default;
@@ -115,8 +115,7 @@ body {
         }
 
         &--logo {
-            visibility: hidden;
-            opacity: 0;
+            display: none;
         }
     }
 
@@ -200,12 +199,6 @@ body {
             width: 100%;
         }
 
-        &-angle-right-icon {
-            position: absolute;
-            right: 5%;
-            font-size: 1.1rem;
-        }
-
         &-title--bottom, &-title--right {
             padding: 0.8rem;
             letter-spacing: 0.1rem;
@@ -227,7 +220,11 @@ body {
             padding: 1rem;
         }
 
-        &__icon {
+        &-angle-right-icon {
+            font-size: 1.1rem;
+        }
+
+        &__icon, &-angle-right-icon {
             position: absolute;
             right: 5%;
         }
@@ -284,8 +281,7 @@ body {
             }
 
             &--logo {
-                visibility: visible;
-                opacity: 1;
+                display: block;
             }
         }
     

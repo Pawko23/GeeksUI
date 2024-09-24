@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
     const burgerBtn = document.querySelector('.navbar__burger-btn');
     const navbarList = document.querySelector('.navbar__list');
     const navbarItems = document.querySelectorAll('.navbar__item--has-submenu');
@@ -28,42 +28,41 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   
     navbarItems.forEach(item => {
-      item.addEventListener('click', function (e) {
+      item.addEventListener('click', (e) => {
         e.stopPropagation();
-        const isActive = this.classList.contains('active');
+        const isActive = item.classList.contains('active');
         closeNavbarItems();
         if(!isActive) {
-          this.classList.add('active');
+          item.classList.add('active');
         }
       });
     });
 
     submenuItems.forEach(item => {
-        item.addEventListener('click', function (e) {
+        item.addEventListener('click', (e) => {
           e.stopPropagation();
-          const isActive = this.classList.contains('active');
+          const isActive = item.classList.contains('active');
           closeSubmenuItems();
 
           if(!isActive) {
-            this.classList.add('active');
+            item.classList.add('active');
           }
-          console.log('Clicked navitem')
         });
     });
 
     quizItems.forEach(item => {
-      item.addEventListener('click', function (e) {
+      item.addEventListener('click', (e) => {
         e.stopPropagation();
-        const isActive = this.classList.contains('active');
+        const isActive = item.classList.contains('active');
         closeQuizItems();
 
         if(!isActive) {
-          this.classList.add('active');
+          item.classList.add('active');
         }
       })
     })
   
-    document.addEventListener('click', function (e) {
+    document.addEventListener('click', (e) => {
       if(!navbarList.contains(e.target)) {
         closeNavbarItems();
       }
