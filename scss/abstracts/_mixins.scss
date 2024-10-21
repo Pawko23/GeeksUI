@@ -1,0 +1,40 @@
+@use './colors' as color;
+
+@mixin flexbox($flex-direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin btn-primary($border-radius: 0.3rem) {
+    padding: 1.5rem;
+    width: 13rem;
+    background-color: color.$primary-color;
+    color: color.$white-default;
+    border: none;
+    border-radius: $border-radius;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: color.$secondary-color;
+    }
+}
+
+@mixin btn-secondary($border-radius: 0.3rem) {
+    padding: 1.5rem;
+    width: 11rem;
+    background-color: transparent;
+    color: color.$secondary-btn-color;
+    border: 0.05rem solid color.$border-color;
+    border-radius: $border-radius;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: color.$secondary-btn-hover;
+    }
+}

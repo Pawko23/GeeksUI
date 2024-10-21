@@ -20,7 +20,5 @@ The original theme design and asssets are created by **Codescandy**. I do not cl
 In order to see the look of the web page:
 1. Clone the repo with ```git clone https://github.com/Pawko23/GeeksUI.git```
 2. Install SASS with ```npm install -g sass```
-3. Compile SASS files to CSS files:
-* Navigate to every component directory independently: ```cd components/navbar```, ```cd components/welcome-section```
-* Run ```sass filename.scss filename.css``` in order to transpile the .scss file existing within current directory
-5. Open the ```index.html```
+3. Run ```sass scss/_main.scss:css/main.css``` from the root directory of a project
+5. Open the ```index.html``` file

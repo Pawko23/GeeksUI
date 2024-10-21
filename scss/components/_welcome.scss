@@ -1,66 +1,8 @@
-$primary-color: #754ffe;
-$primary-dark: #593cc1;
-$primary-light: #e3dcff;
-$secondary-color: #6343d8;
-$white-default: #ffffff;
-$black-default: #000000;
-$box-shadow-color: #cccccc;
-$item-grey: #64748b;
-$bg-hover: #f1f5f9;
-$border-color: #94a3b8;
-$border-bottom-color: #cbd5e1;
-$secondary-btn-color: #334155;
-$secondary-btn-hover: #f1f5f9;
-$star-color: rgb(245, 158, 11);
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-@mixin flexbox($flex-direction: row, $justify: center, $align: center) {
-    display: flex;
-    flex-direction: $flex-direction;
-    justify-content: $justify;
-    align-items: $align;
-}
-
-@mixin btn-primary($border-radius: 0.3rem) {
-    padding: 1.5rem;
-    width: 13rem;
-    background-color: $primary-color;
-    color: $white-default;
-    border: none;
-    border-radius: $border-radius;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-
-    &:hover {
-        background-color: $secondary-color;
-    }
-}
-
-@mixin btn-secondary($border-radius: 0.3rem) {
-    padding: 1.5rem;
-    width: 11rem;
-    background-color: transparent;
-    color: $secondary-btn-color;
-    border: 0.05rem solid $border-color;
-    border-radius: $border-radius;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-
-    &:hover {
-        background-color: $secondary-btn-hover;
-    }
-}
+@use '../abstracts' as abs;
 
 .welcome {
     position: relative;
-    @include flexbox(column, center, center);
+    @include abs.flexbox(column, center, center);
     margin: 0 0 2rem 0;
     text-align: center;
     width: 100%;
@@ -70,7 +12,7 @@ $star-color: rgb(245, 158, 11);
     }
 
     &__box {
-        @include flexbox(column, center, center);
+        @include abs.flexbox(column, center, center);
         margin-top: 5rem;
     }
 
@@ -80,7 +22,7 @@ $star-color: rgb(245, 158, 11);
     }
 
     &__geeks-span {
-        color: $primary-color;
+        color: abs.$primary-color;
     }
 
     &__description {
@@ -99,21 +41,20 @@ $star-color: rgb(245, 158, 11);
         cursor: pointer;
 
         &--primary {
-            @include btn-primary();
+            @include abs.btn-primary();
         }
 
         &--secondary {
-            @include btn-secondary();
-        }
+            @include abs.btn-secondary();
+        } 
     }
 
     &__preview-icon {
         margin-left: 0.5rem;
     }
 
-
     &__rating {
-        @include flexbox();
+        @include abs.flexbox();
         margin: 1.5rem auto;
     
         &-score, &-description {
@@ -123,7 +64,7 @@ $star-color: rgb(245, 158, 11);
 
         &-score {
             font-size: 1.1rem;
-            border: 0.1rem solid $border-color;
+            border: 0.1rem solid abs.$border-color;
             border-radius: 0.3rem;
         }
 
@@ -139,29 +80,29 @@ $star-color: rgb(245, 158, 11);
     &__star-icon {
         font-size: 1.1rem;
         margin-right: 0.5rem;
-        color: $star-color;
+        color: abs.$star-color;
     }
 
     &__features {
         margin: 5rem;
         padding: 2rem;
         width: 100%;
-        border-bottom: 1px solid $border-bottom-color;
+        border-bottom: 1px solid abs.$border-bottom-color;
         &-box {
             margin: 2rem 0;
-            @include flexbox(row, center, flex-start);
+            @include abs.flexbox(row, center, flex-start);
         }
 
         &-icon {
-            @include flexbox(row, center, center);
-            background-color: $primary-light;
+            @include abs.flexbox(row, center, center);
+            background-color: abs.$primary-light;
             min-width: 4.8rem;
             height: 4.8rem;
             flex-shrink: 0;
             border-radius: 1rem;
             &--shapes, &--mobile, &--moon {
                 font-size: 2rem;
-                color: $primary-dark;
+                color: abs.$primary-dark;
                 z-index: 1;
             }
         }
@@ -184,7 +125,7 @@ $star-color: rgb(245, 158, 11);
         &-description {
             font-size: 1.5rem;
             width: 80%;
-            color: $secondary-btn-color;
+            color: abs.$secondary-btn-color;
         }
     }
 }
@@ -251,7 +192,7 @@ $star-color: rgb(245, 158, 11);
         }
 
         &__features {
-            @include flexbox(row, center, flex-start);
+            @include abs.flexbox(row, center, flex-start);
             width: 100%;
             padding: 1rem;
             margin: 15rem 0;
