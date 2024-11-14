@@ -66,3 +66,23 @@
         }
     }
 }
+
+@media (min-width: 768px) {
+    .highlights {
+        &__heading {
+            max-width: none;
+            padding: 2rem 6rem;
+        }
+
+        &__features {
+            @include flexbox(row, center, flex-start);
+            flex-wrap: wrap;
+        }
+
+        &__feature {
+            width: 20rem;
+            height: auto;
+            margin: 3rem 2.5rem;
+        }
+    }
+}
