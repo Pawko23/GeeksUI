@@ -17,4 +17,43 @@
         font-size: 1.8rem;
         color: $secondary-btn-color;
     }
+
+    &__features {
+        @include flexbox(column, center, center);
+    }
+
+    &__feature {
+        margin: 3rem;
+        padding: 3rem;
+        border: 0.1rem solid $border-color;
+        border-radius: 1rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-1rem);
+            box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+        }
+
+        &-title {
+            font-size: 1.8rem;
+            margin: 1.5rem 0;
+        }
+
+        &-description {
+            font-size: 1.5rem;
+            color: $secondary-btn-color;
+            line-height: 1.5;
+        }
+
+        &-icon {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: $primary-color;
+        }
+
+        &-link {
+            text-decoration: none;
+            color: $primary-color;
+        }
+    }
 }
