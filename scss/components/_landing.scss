@@ -2,8 +2,12 @@
 
 .landing {
     @include flexbox(column, center, center);
-    &__info {
+    &__info, &__offers {
         width: 90%;
+    }
+
+    &__offers {
+        margin-top: 7rem;
     }
 
     &__title {
@@ -14,5 +18,33 @@
         font-size: 1.5rem;
         margin: 1rem 0;
         line-height: 2.2rem;
+    }
+
+    &__card {
+        @include flexbox (column, center, center);
+        width: 100%;
+        margin: 3rem 0;
+        background-color: $secondary-btn-hover;
+        border-radius: 1.6rem;
+        border: 0.1rem solid $card-border;
+
+        &-figure {
+            width: 90%;
+            padding: 2.3rem 0.1rem;
+        }
+
+        &-img {
+            width: 100%;
+            box-shadow: 0 0 0.5rem $card-border;
+            border-radius: 0.8rem;
+            background-position: center;
+            background-size: cover;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.02);
+                cursor: pointer;
+            }
+        }
     }
 }
