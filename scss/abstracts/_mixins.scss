@@ -1,4 +1,4 @@
-@use './colors' as color;
+@use 'variables' as *;
 
 @mixin flexbox($flex-direction: row, $justify: center, $align: center) {
     display: flex;
@@ -10,8 +10,8 @@
 @mixin btn-primary($border-radius: 0.3rem) {
     padding: 1.5rem;
     width: 13rem;
-    background-color: color.$primary-color;
-    color: color.$white-default;
+    background-color: $primary-color;
+    color: $white-default;
     border: none;
     border-radius: $border-radius;
     font-weight: 600;
@@ -19,7 +19,7 @@
     cursor: pointer;
 
     &:hover {
-        background-color: color.$secondary-color;
+        background-color: $secondary-color;
     }
 }
 
@@ -27,14 +27,14 @@
     padding: 1.5rem;
     width: 11rem;
     background-color: transparent;
-    color: color.$secondary-btn-color;
-    border: 0.05rem solid color.$border-color;
+    color: $secondary-btn-color;
+    border: 0.05rem solid $border-color;
     border-radius: $border-radius;
     font-weight: 600;
     transition: background-color 0.3s ease;
     cursor: pointer;
 
     &:hover {
-        background-color: color.$secondary-btn-hover;
+        background-color: $secondary-btn-hover;
     }
 }

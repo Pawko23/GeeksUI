@@ -1,8 +1,8 @@
-@use '../abstracts' as abs;
+@use '../abstracts' as *;
 
 .welcome {
     position: relative;
-    @include abs.flexbox(column, center, center);
+    @include flexbox(column, center, center);
     margin: 0 0 2rem 0;
     text-align: center;
     width: 100%;
@@ -12,7 +12,7 @@
     }
 
     &__box {
-        @include abs.flexbox(column, center, center);
+        @include flexbox(column, center, center);
         margin-top: 5rem;
     }
 
@@ -22,7 +22,7 @@
     }
 
     &__geeks-span {
-        color: abs.$primary-color;
+        color: $primary-color;
     }
 
     &__description {
@@ -41,12 +41,16 @@
         cursor: pointer;
 
         &--primary {
-            @include abs.btn-primary();
+            @include btn-primary();
         }
 
         &--secondary {
-            @include abs.btn-secondary();
+            @include btn-secondary();
         } 
+    }
+
+    &__cart-icon {
+        padding-right: 0.5rem;
     }
 
     &__preview-icon {
@@ -54,7 +58,7 @@
     }
 
     &__rating {
-        @include abs.flexbox();
+        @include flexbox();
         margin: 1.5rem auto;
     
         &-score, &-description {
@@ -64,7 +68,7 @@
 
         &-score {
             font-size: 1.1rem;
-            border: 0.1rem solid abs.$border-color;
+            border: 0.1rem solid $border-color;
             border-radius: 0.3rem;
         }
 
@@ -80,31 +84,32 @@
     &__star-icon {
         font-size: 1.1rem;
         margin-right: 0.5rem;
-        color: abs.$star-color;
+        color: $star-color;
     }
 
     &__features {
         margin: 5rem;
         padding: 2rem;
         width: 100%;
-        border-bottom: 1px solid abs.$border-bottom-color;
+        border-bottom: 1px solid $border-bottom-color;
         &-box {
             margin: 2rem 0;
-            @include abs.flexbox(row, center, flex-start);
+            @include flexbox(row, center, flex-start);
         }
 
-        &-icon {
-            @include abs.flexbox(row, center, center);
-            background-color: abs.$primary-light;
+        &-icon-box {
+            @include flexbox(row, center, center);
+            background-color: $primary-light;
             min-width: 4.8rem;
             height: 4.8rem;
             flex-shrink: 0;
             border-radius: 1rem;
-            &--shapes, &--mobile, &--moon {
-                font-size: 2rem;
-                color: abs.$primary-dark;
-                z-index: 1;
-            }
+        }
+
+        &-icon {
+            font-size: 2rem;
+            color: $primary-dark;
+            z-index: 1;
         }
 
         &-info {
@@ -125,7 +130,7 @@
         &-description {
             font-size: 1.5rem;
             width: 80%;
-            color: abs.$secondary-btn-color;
+            color: $secondary-btn-color;
         }
     }
 }
@@ -192,7 +197,7 @@
         }
 
         &__features {
-            @include abs.flexbox(row, center, flex-start);
+            @include flexbox(row, center, flex-start);
             width: 100%;
             padding: 1rem;
             margin: 15rem 0;
