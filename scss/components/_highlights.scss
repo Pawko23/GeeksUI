@@ -101,3 +101,18 @@
         }
     }
 }
+
+@media (min-width: 1200px) {
+    .highlights {
+        &__heading {
+            max-width: 50rem;
+            padding: 2rem;
+        }
+
+        &__feature {
+            width: 37rem;
+            height: auto;
+            margin: 3rem 1rem;
+        }
+    }
+}
