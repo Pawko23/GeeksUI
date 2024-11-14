@@ -126,3 +126,11 @@
         }
     }
 }
+
+@media (min-width: 1800px) {
+    .highlights {
+        &__feature {
+            margin: 3rem 3rem;
+        }
+    }
+}
