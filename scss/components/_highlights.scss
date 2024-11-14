@@ -57,3 +57,12 @@
         }
     }
 }
+
+@media (min-width: 576px) {
+    .highlights {
+        &__feature {
+            width: 50rem;
+            height: 22rem;
+        }
+    }
+}
