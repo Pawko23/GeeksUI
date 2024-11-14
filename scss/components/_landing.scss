@@ -46,5 +46,25 @@
                 cursor: pointer;
             }
         }
+
+        &-details {
+            @include flexbox(row, space-between, center);
+            width: 85%;
+            margin-bottom: 2rem;
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        &-new {
+            padding: 0.3rem 1rem;
+            font-size: 1.1rem;
+            background-color: $card-new-feature;
+            color: $white-default;
+            font-weight: 450;
+            border-radius: 0.5rem;
+        }
     }
 }
