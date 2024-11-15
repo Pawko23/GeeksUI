@@ -107,3 +107,18 @@
         }
     }
 }
+
+@media (min-width: 1200px) {
+    .landing {
+        margin: 0 auto;
+        width: 80%;
+
+        &__info {
+            margin-left: 0;
+        }
+
+        &__offers {
+            padding: 0;
+        }
+    }
+}
