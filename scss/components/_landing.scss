@@ -83,3 +83,27 @@
         }
     }
 }
+
+@media (min-width: 992px) {
+    .landing {
+        &__info {
+            align-self: flex-start;
+            width: 40vw;
+            margin-left: 5%;
+        }
+        
+        &__offers {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-column-gap: 20px;
+            grid-row-gap: 5px;
+            max-width: 90vw;
+            padding: 2rem;
+        }
+
+        &__card {
+            margin: 1rem auto;
+        }
+    }
+}
