@@ -8,6 +8,7 @@
 
     &__offers {
         margin-top: 7rem;
+        max-width: 50rem;
     }
 
     &__title {
@@ -65,6 +66,20 @@
             color: $white-default;
             font-weight: 450;
             border-radius: 0.5rem;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .landing {
+        
+        &__info {
+            width: 80%;
+        }
+        
+        &__offers {
+            max-width: 70rem;
+            width: 100%;
         }
     }
 }
