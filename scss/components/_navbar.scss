@@ -3,43 +3,43 @@
 .navbar {
     position: relative;
     @include flexbox(column, center, center);
-    min-height: 5rem;
-    box-shadow: 0 0.1rem 0.1rem $box-shadow-color;
+    min-height: 3.125rem;
+    box-shadow: 0 0.06rem 0.06rem $box-shadow-color;
     transition: height 0.3s ease;
 
     &__logo {
         position: absolute;
-        top: 1.5rem;
-        left: 1.5rem;
-        font-size: 1.4rem;
+        top: 0.9rem;
+        left: 0.9rem;
+        font-size: 0.8rem;
         z-index: 2;
     }
 
     &__burger-btn {
         position: absolute;
-        top: 1rem;
-        right: 1rem;
-        border: 0.1rem solid $item-grey;
-        border-radius: 0.5rem;
-        width: 4rem;
+        top: 0.6rem;
+        right: 0.6rem;
+        border: 0.06rem solid $item-grey;
+        border-radius: 0.3rem;
+        width: 2.5rem;
         background-color: transparent;
         cursor: pointer;
     }
 
     &__burger-icon {
         color: $item-grey;
-        font-size: 2rem;
-        padding: 0.5rem;
+        font-size: 1.2rem;
+        padding: 0.3rem;
     }
 
     &__btn-buy {
-        margin: 0.5rem;
+        margin: 0.3rem;
         @include btn-primary();
     }
 
     &__list {
         position: relative;
-        margin-top: 5rem;
+        margin-top: 3.1rem;
         display: block;
         width: 100%;
         background-color: $white-default;
@@ -50,15 +50,15 @@
 
     &__list.active {
         @include flexbox(column, flex-start, flex-start);
-        max-height: 150rem;
+        max-height: 94rem;
     }
 
     &__item {
         position: relative;
         @include flexbox(column, flex-start, space-evenly);
         width: 100%;
-        font-size: 1.4rem;;
-        padding: 1rem;
+        font-size: 0.9rem;
+        padding: 0.6rem;
         color: $black-default;
         cursor: pointer;
 
@@ -81,13 +81,13 @@
     &__icon {
         position: absolute;
         right: 5%;
-        font-size: 1.1rem;
+        font-size: 0.7rem;
     }
 
     &__submenu {
         position: relative;
         display: none;
-        padding: 1rem;
+        padding: 0.6rem;
 
         &--bottom, &--right, &--right-lowest {
             position: relative;
@@ -108,8 +108,8 @@
             @include flexbox(column, flex-start, flex-start);
             position: relative;
             width: 100%;
-            font-size: 1.4rem;;
-            padding: 0.8rem;
+            font-size: 0.9rem;;
+            padding: 0.5rem;
             color: $black-default;
             cursor: pointer;
 
@@ -127,36 +127,36 @@
 
             &-box {
                 @include flexbox(row, flex-start, center);
-                padding: 0.5rem;
-                margin: 0.5rem;
+                padding: 0.3rem;
+                margin: 0.3rem;
 
                 &-content {
-                    margin-left: 1.5rem;
+                    margin-left: 0.9rem;
                 }
 
                 &-title {
                     font-weight: 600;
-                    padding: 0.2rem;
+                    padding: 0.1rem;
                 }
 
                 &-description {
                     color: $item-grey;
-                    padding: 0.2rem;
+                    padding: 0.1rem;
                 }
             }
         }
 
         &-separator {
             border-bottom: $item-grey; 
-            margin: 1rem auto;
+            margin: 0.7rem auto;
             opacity: 1;
             width: 100%;
         }
 
         &-title--bottom, &-title--right {
-            padding: 0.8rem;
-            letter-spacing: 0.1rem;
-            margin-top: 0.5rem;
+            padding: 0.5rem;
+            letter-spacing: 0.06rem;
+            margin-top: 0.3rem;
             font-weight: 500;
             text-transform: uppercase;
         }
@@ -171,11 +171,11 @@
 
         &-description {
             color: $item-grey;
-            padding: 1rem;
+            padding: 0.6rem;
         }
 
         &-angle-right-icon {
-            font-size: 1.1rem;
+            font-size: 0.7rem;
         }
 
         &__icon, &-angle-right-icon {
@@ -193,9 +193,9 @@
 @media(min-width: 992px) {
     .navbar {
         @include flexbox(row, space-evenly, center);
-        height: 7rem;
-        padding: 0 2rem;
-        box-shadow: 0 0.1rem 0.1rem $box-shadow-color;
+        height: 4.3rem;
+        padding: 0 1.25rem;
+        box-shadow: 0 0.06rem 0.06rem $box-shadow-color;
         
         &__logo {
             display: none;
@@ -204,7 +204,7 @@
         &__list {
             @include flexbox(row, flex-start, center);
             list-style: none;
-            height: 7rem;
+            height: 4.3rem;
             margin: 0;
             padding: 0;
             overflow: visible;
@@ -214,7 +214,7 @@
         &__item {
             position: relative;
             @include flexbox(row, center, center);
-            font-size: 1.3rem;
+            font-size: 0.8rem;
             font-weight: 500;
             color: $black-default;
             transition: color 0.3s ease;
@@ -252,19 +252,19 @@
         &__icon {
             position: relative;
             right: 0;
-            margin-left: 0.5rem;
+            margin-left: 0.3rem;
         }
     
         &__angle-down-icon {
-            font-size: 1.1rem;
+            font-size: 0.6rem;
         }
     
         &__submenu {
             position: absolute;
             @include flexbox(column, center, flex-start);
             background-color: $white-default;
-            box-shadow: 0 0 0.5rem $box-shadow-color;
-            border-radius: 0.5rem;
+            box-shadow: 0 0 0.3rem $box-shadow-color;
+            border-radius: 0.3rem;
             z-index: 1000;
             opacity: 0;
             visibility: hidden;
@@ -285,9 +285,9 @@
             }
 
             &-title--bottom, &-title--right {
-                padding: 1rem;
-                letter-spacing: 0.1rem;
-                margin-top: 0.5rem;
+                padding: 0.7rem;
+                letter-spacing: 0.06rem;
+                margin-top: 0.3rem;
                 font-weight: 500;
                 text-transform: uppercase;
             } 
@@ -302,7 +302,7 @@
     
             &-description {
                 color: $item-grey;
-                padding: 1rem;
+                padding: 0.6rem;
             }
     
             &-list {
@@ -315,7 +315,7 @@
                 &--docs-list {
                     width: 100%;
                     list-style: none;
-                    margin-top: 1.5rem;
+                    margin-top: 0.9rem;
                     padding: 0;
                 }
             }
@@ -324,7 +324,7 @@
                 position: relative;
                 color: $black-default;
                 transition: background-color 0.3s ease, color 0.3s ease;
-                padding: 1rem;
+                padding: 0.6rem;
                 margin: 0;
                 width: 100%;
                 &:hover {
@@ -347,7 +347,7 @@
                 }
     
                 &--docs-item {
-                    padding: 1rem;
+                    padding: 0.6rem;
                     margin: 0;
                 }
     
@@ -361,21 +361,21 @@
     
                 &-box {
                     @include flexbox(row, flex-start, center);
-                    padding: 0.5rem;
-                    margin: 0.5rem;
+                    padding: 0.3rem;
+                    margin: 0.3rem;
     
                     &-content {
-                        margin-left: 1.5rem;
+                        margin-left: 0.9rem;
                     }
     
                     &-title {
                         font-weight: 600;
-                        padding: 0.2rem;
+                        padding: 0.1rem;
                     }
     
                     &-description {
                         color: $item-grey;
-                        padding: 0.2rem;
+                        padding: 0.1rem;
                     }
                 }
             }
@@ -393,19 +393,19 @@
     
             &-docs-icon {
                 color: $primary-color;
-                font-size: 2rem;
+                font-size: 1.25rem;
             }
     
             &-separator {
                 border-bottom: $item-grey; 
-                margin: 1rem auto;
+                margin: 0.6rem auto;
                 opacity: 1;
                 width: 90%;
             }
         }
     
         &__btn-buy {
-            margin-left: 25rem;
+            margin-left: 15rem;
             @include btn-primary();
         }
     
@@ -414,8 +414,8 @@
         }
     
         &__burger-icon {
-            font-size: 2rem;
-            padding: 0.5rem;
+            font-size: 1.2rem;
+            padding: 0.3rem;
         }
     }
 }
