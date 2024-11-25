@@ -1,10 +1,2 @@
-# Transpiled CSS files
-
-/showcase
-
-styles.css
-styles.min.css
-
-# Source maps
-styles.css.map 
-styles.min.css.map 
+# Transpiled CSS
+/css

@@ -1,0 +1,224 @@
+@use '../abstracts' as *;
+
+.welcome {
+    position: relative;
+    @include flexbox(column, center, center);
+    margin: 0 0 1.2rem 0;
+    text-align: center;
+    width: 100%;
+
+    &__box, &__description {
+        padding: 0.6rem;
+    }
+
+    &__box {
+        @include flexbox(column, center, center);
+        margin-top: 2rem;
+    }
+
+    &__title {
+        font-size: 2rem;
+        width: 75%;
+    }
+
+    &__brand {
+        color: $primary-color;
+    }
+
+    &__description {
+        margin-top: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+
+    &__btn-box {
+        margin: 0.9rem;
+    }
+
+    &__button {
+        margin: 0 0.3rem;
+        padding: 1.3rem 1.5rem;
+        cursor: pointer;
+
+        &--primary {
+            @include btn-primary();
+        }
+
+        &--secondary {
+            @include btn-secondary();
+        } 
+    }
+
+    &__cart-icon {
+        padding-right: 0.3rem;
+    }
+
+    &__preview-icon {
+        margin-left: 0.3rem;
+    }
+
+    &__rating {
+        @include flexbox();
+        margin: 0.9rem auto;
+    
+        &-score, &-description {
+            margin: 0.1rem;
+            padding: 0.3rem 0.6rem;
+        }
+
+        &-score {
+            font-size: 0.7rem;
+            border: 0.06rem solid $border-color;
+            border-radius: 0.2rem;
+        }
+
+        &-description {
+            font-size: 1rem;
+        }
+
+        &-stats {
+            font-weight: 700;
+        }
+    }
+
+    &__star-icon {
+        font-size: 0.7rem;
+        margin-right: 0.3rem;
+        color: $star-color;
+    }
+
+    &__features {
+        margin: 3rem;
+        padding: 1.2rem;
+        width: 100%;
+        border-bottom: 0.06rem solid $border-bottom-color;
+        &-box {
+            margin: 1.2rem 0;
+            @include flexbox(row, center, flex-start);
+        }
+
+        &-icon-box {
+            @include flexbox(row, center, center);
+            background-color: $primary-light;
+            min-width: 3rem;
+            height: 3rem;
+            flex-shrink: 0;
+            border-radius: 0.6rem;
+        }
+
+        &-icon {
+            font-size: 1.2rem;
+            color: $primary-dark;
+            z-index: 1;
+        }
+
+        &-info {
+            margin-left: 0.9rem;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        &-title, &-description {
+            padding: 0.3rem;
+        }
+
+        &-title {
+            font-weight: 600;
+        }
+
+        &-description {
+            font-size: 0.9rem;
+            width: 80%;
+            color: $secondary-btn-color;
+        }
+    }
+}
+
+@media(min-width: 576px) {
+    .welcome {
+        &__title {
+            font-size: 2.1rem;
+        }
+
+        &__description {
+            font-size: 1.1rem;
+        }
+
+        &__rating {
+            &-score {
+                font-size: 0.8rem;
+            }
+            &-description {
+                font-size: 1.1rem;
+            }
+        }
+
+        &__star {
+            &-icon {
+                font-size: 0.8rem;
+            }
+        }
+
+        &__features {
+            width: 90%;
+        }
+    }
+}
+
+@media(min-width: 992px) {
+    .welcome {
+        &__box {
+            width: 50%;
+        }
+
+        &__title {
+            font-size: 2.5rem;
+            margin-top: 6.2rem;
+        }
+
+        &__description {
+            font-size: 1.2rem;
+        }
+
+        &__rating {
+            &-score {
+                font-size: 0.9rem;
+            }
+            &-description {
+                font-size: 1.2rem;
+            }
+        }
+
+        &__star {
+            &-icon {
+                font-size: 0.9rem;
+            }
+        }
+
+        &__features {
+            @include flexbox(row, center, flex-start);
+            width: 100%;
+            padding: 0.6rem;
+            margin: 9.3rem 0;
+            &-box {
+                margin: 1.2rem 0.6rem;
+            }
+
+            &-title {
+                font-size: 1.2rem;
+            }
+
+            &-description {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+@media(min-width: 1200px) {
+    .welcome {
+        &__features {
+            width: 80%;
+        }
+    }
+}

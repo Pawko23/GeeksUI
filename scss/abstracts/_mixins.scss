@@ -1,0 +1,40 @@
+@use 'variables' as *;
+
+@mixin flexbox($flex-direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin btn-primary($border-radius: 0.1rem) {
+    padding: 0.9rem;
+    width: 8rem;
+    background-color: $primary-color;
+    color: $white-default;
+    border: none;
+    border-radius: $border-radius;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $secondary-color;
+    }
+}
+
+@mixin btn-secondary($border-radius: 0.1rem) {
+    padding: 0.9rem;
+    width: 7rem;
+    background-color: transparent;
+    color: $secondary-btn-color;
+    border: 0.03rem solid $border-color;
+    border-radius: $border-radius;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $secondary-btn-hover;
+    }
+}
