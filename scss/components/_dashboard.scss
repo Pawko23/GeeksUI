@@ -3,11 +3,9 @@
 .dashboard {
     @include flexbox(column, center, center);
     margin: 3rem 0;
-
     &__info {
         align-self: flex-start;
         width: 80vw;
-        margin-left: 2rem;
     }
 
     &__info, &__offers {
@@ -65,7 +63,6 @@
     .dashboard {
         &__info {
             width: 90vw;
-            margin-left: 0;
         }
 
         &__title {
@@ -74,6 +71,25 @@
 
         &__card {
             max-width: 70rem;
+        }
+    }
+}
+
+@media(min-width: 992px) {
+    .dashboard {
+        &__info {
+            width: 50vw;
+            padding: 1rem;
+        }
+
+        &__offers {
+            @include flexbox(row, center, center);
+            padding: 4rem 0.5rem;
+        }
+
+        &__card {
+            max-width: 40rem;
+            margin: 1rem;
         }
     }
 }
