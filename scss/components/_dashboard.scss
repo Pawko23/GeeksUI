@@ -93,3 +93,11 @@
         }
     }
 }
+
+@media(min-width: 1200px) {
+    .dashboard {
+        &__info {
+            width: 40vw;
+        }
+    }
+}
