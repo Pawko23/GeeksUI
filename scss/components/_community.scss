@@ -9,7 +9,52 @@
         font-size: 1.2rem;
     }
 
+    &__title, &__reviews {
+        margin: 1.2rem auto;
+    }
+
+    &__reviews {
+        width: 80%;
+        font-size: 0.8rem;
+    }
+
     &__stats, &__devs {
         color: $primary-color;
     }
+
+    &__review {
+        &-card {
+            border: 0.06rem solid $review-card-border;
+            border-radius: 0.6rem;
+            padding: 1.2rem;
+            max-width: 31rem;
+        }
+
+        &-title {
+            margin: 0.9rem 0;
+        }
+
+        &-title, &-author {
+            font-weight: 700;
+        }
+        
+        &-comment {
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        &-feedback {
+            @include flexbox(column, center, flex-start);
+            margin-top: 1rem;
+        }
+
+        &-rating {
+            margin-top: 0.4rem;
+        }
+    }
+
+    &__star-icon {
+        color: $star-color;
+    }
+
 }
