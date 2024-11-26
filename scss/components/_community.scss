@@ -108,3 +108,14 @@
         }
     }
 }
+
+@media (min-width: 1400px) {
+    .community {
+        &__review {
+            &-card {
+                max-width: 25rem;
+                margin: 1rem;
+            }
+        }
+    }
+}
