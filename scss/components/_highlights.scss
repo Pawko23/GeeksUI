@@ -3,18 +3,18 @@
 .highlights {
     @include flexbox(column, center, center);
     &__heading {
-        padding: 2rem;
+        padding: 1.25rem;
         text-align: center;
-        max-width: 50rem;
+        max-width: 31rem;
     }
 
     &__title {
-        padding: 3rem;
-        font-size: 3rem;
+        padding: 1.9rem;
+        font-size: 1.9rem;
     }
 
     &__description {
-        font-size: 1.8rem;
+        font-size: 1.1rem;
         color: $secondary-btn-color;
     }
 
@@ -23,31 +23,31 @@
     }
 
     &__feature {
-        margin: 3rem;
-        padding: 3rem;
-        border: 0.1rem solid $border-color;
-        border-radius: 1rem;
+        margin: 1.9rem;
+        padding: 1.9rem;
+        border: 0.06rem solid $border-color;
+        border-radius: 0.6rem;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
 
         &:hover {
             transform: translateY(-1rem);
-            box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.2);
         }
 
         &-title {
-            font-size: 1.8rem;
-            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            margin: 0.9rem 0;
         }
 
         &-description {
-            font-size: 1.5rem;
+            font-size: 0.9rem;
             color: $secondary-btn-color;
             line-height: 1.5;
         }
 
         &-icon {
-            font-size: 3rem;
-            margin-bottom: 2rem;
+            font-size: 1.9rem;
+            margin-bottom: 1.2rem;
             color: $primary-color;
         }
 
@@ -61,8 +61,8 @@
 @media (min-width: 576px) {
     .highlights {
         &__feature {
-            width: 50rem;
-            height: 22rem;
+            width: 31rem;
+            height: 14rem;
         }
     }
 }
@@ -71,7 +71,7 @@
     .highlights {
         &__heading {
             max-width: none;
-            padding: 2rem 6rem;
+            padding: 1.2rem 4rem;
         }
 
         &__features {
@@ -80,9 +80,9 @@
         }
 
         &__feature {
-            width: 20rem;
+            width: 12.5rem;
             height: auto;
-            margin: 3rem 2.5rem;
+            margin: 1.9rem 1.5rem;
         }
     }
 }
@@ -91,13 +91,13 @@
     .highlights {
         &__heading {
             max-width: none;
-            padding: 2rem 4rem;
+            padding: 1.2rem 2.5rem;
         }
 
         &__feature {
-            width: 30rem;
+            width: 19rem;
             height: auto;
-            margin: 3rem 1rem;
+            margin: 1.9rem 0.6rem;
         }
     }
 }
@@ -105,14 +105,14 @@
 @media (min-width: 1200px) {
     .highlights {
         &__heading {
-            max-width: 50rem;
-            padding: 2rem;
+            max-width: 31rem;
+            padding: 1.2rem;
         }
 
         &__feature {
-            width: 37rem;
+            width: 23rem;
             height: auto;
-            margin: 3rem 1rem;
+            margin: 1.9rem 0.6rem;
         }
     }
 }
@@ -120,9 +120,9 @@
 @media (min-width: 1400px) {
     .highlights {
         &__feature {
-            width: 42rem;
+            width: 26rem;
             height: auto;
-            margin: 3rem 1rem;
+            margin: 1.9rem 0.6rem;
         }
     }
 }
@@ -130,7 +130,7 @@
 @media (min-width: 1800px) {
     .highlights {
         &__feature {
-            margin: 3rem 3rem;
+            margin: 1.9rem;
         }
     }
 }

@@ -8,13 +8,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/594a9a3356.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
     <title>Practise</title>
 </head>
 <body>
     <header>
         <nav class="navbar">
+            <a class="navbar__logo navbar__link" href="#"><i class="fa-brands fa-uikit"></i></a>
             <ul class="navbar__list">
-                <li class="navbar__item"><a class="navbar__link" href="#"><i class="fa-brands fa-uikit"></i></a></li>
+                <li class="navbar__item navbar__item--logo"><a class="navbar__link" href="#"><i class="fa-brands fa-uikit"></i></a></li>
                 <li class="navbar__item navbar__item--has-submenu">
                     Landings 
                     <span class="navbar__icon">
@@ -35,7 +37,8 @@
                     </div>
                 </li>
                 <li class="navbar__item navbar__item--has-submenu">
-                    Pages <span class="navbar__icon"><i class="fa-solid fa-angle-down"></i></span>
+                    Pages 
+                    <span class="navbar__icon"><i class="fa-solid fa-angle-down"></i></span>
                     <div class="navbar__submenu navbar__submenu--bottom">
                         <ul class="navbar__submenu-list">
                             <li class="navbar__submenu-item navbar__submenu-item--has-submenu"><a class="navbar__submenu-link" href="#">
@@ -264,20 +267,21 @@
                         </ul>
                     </div>
                 </li>
+                <button class="navbar__btn-buy navbar__btn-buy--primary"><i class="fa-solid fa-cart-shopping"></i><span>Buy Geeks</span></button>
             </ul>
-            <button class="navbar__btn-buy navbar__btn-buy--primary"><i class="fa-solid fa-cart-shopping"></i><span>Buy Geeks</span></button>
+            <button class="navbar__burger-btn"><i class="navbar__burger-icon fa-solid fa-bars"></i></button>
         </nav>
     </header>
     <main>
         <section>
             <div class="welcome">
                 <div class="welcome__box">
-                    <h1 class="welcome__title"><span class="welcome__geeks-span">Geeks UI</span>, Premium LMS / Education HTML Template</h1>
+                    <h1 class="welcome__title"><span class="welcome__brand">Geeks UI</span>, Premium LMS / Education HTML Template</h1>
                     <p class="welcome__description">Geeks UI Premium LMS education HTML template, perfect for online courses, colleges, schools, training hubs, and corporate programs. Enhance your educational platform with seamless design and advanced features for modern learning.</p>
                 </div>
                 <div class="welcome__btn-box">
-                    <button class="welcome__button welcome__button--primary"><i class="welcome__cart-icon fa-solid fa-cart-shopping"></i><span>Buy Geeks</span></button>
-                    <button class="welcome__button welcome__button--secondary">Preview <span><i class="welcome__preview-icon fa-solid fa-arrow-up-right-from-square"></i></span></button>
+                    <button class="welcome__button welcome__button--primary"><i class="welcome__cart-icon fa-solid fa-cart-shopping"></i>Buy Geeks</button>
+                    <button class="welcome__button welcome__button--secondary">Preview <i class="welcome__preview-icon fa-solid fa-arrow-up-right-from-square"></i></button>
                 </div>
                 <div class="welcome__rating">
                     <p class="welcome__rating-score"><i class="welcome__star-icon fa-solid fa-star"></i>5.0</p>

@@ -3,41 +3,41 @@
 .welcome {
     position: relative;
     @include flexbox(column, center, center);
-    margin: 0 0 2rem 0;
+    margin: 0 0 1.2rem 0;
     text-align: center;
     width: 100%;
 
     &__box, &__description {
-        padding: 1rem;
+        padding: 0.6rem;
     }
 
     &__box {
         @include flexbox(column, center, center);
-        margin-top: 5rem;
+        margin-top: 2rem;
     }
 
     &__title {
-        font-size: 3rem;
+        font-size: 2rem;
         width: 75%;
     }
 
-    &__geeks-span {
+    &__brand {
         color: $primary-color;
     }
 
     &__description {
-        margin-top: 1rem;
-        font-size: 1.5rem;
+        margin-top: 0.6rem;
+        font-size: 0.9rem;
     }
 
 
     &__btn-box {
-        margin: 1.5rem;
+        margin: 0.9rem;
     }
 
     &__button {
-        margin: 0 0.5rem;
-        padding: 1.5rem 2.5rem;
+        margin: 0 0.3rem;
+        padding: 1.3rem 1.5rem;
         cursor: pointer;
 
         &--primary {
@@ -50,30 +50,30 @@
     }
 
     &__cart-icon {
-        padding-right: 0.5rem;
+        padding-right: 0.3rem;
     }
 
     &__preview-icon {
-        margin-left: 0.5rem;
+        margin-left: 0.3rem;
     }
 
     &__rating {
         @include flexbox();
-        margin: 1.5rem auto;
+        margin: 0.9rem auto;
     
         &-score, &-description {
-            margin: 0.2rem;
-            padding: 0.5rem 1rem;
+            margin: 0.1rem;
+            padding: 0.3rem 0.6rem;
         }
 
         &-score {
-            font-size: 1.1rem;
-            border: 0.1rem solid $border-color;
-            border-radius: 0.3rem;
+            font-size: 0.7rem;
+            border: 0.06rem solid $border-color;
+            border-radius: 0.2rem;
         }
 
         &-description {
-            font-size: 1.5rem;
+            font-size: 1rem;
         }
 
         &-stats {
@@ -82,81 +82,80 @@
     }
 
     &__star-icon {
-        font-size: 1.1rem;
-        margin-right: 0.5rem;
+        font-size: 0.7rem;
+        margin-right: 0.3rem;
         color: $star-color;
     }
 
     &__features {
-        margin: 5rem;
-        padding: 2rem;
+        margin: 3rem;
+        padding: 1.2rem;
         width: 100%;
-        border-bottom: 1px solid $border-bottom-color;
+        border-bottom: 0.06rem solid $border-bottom-color;
         &-box {
-            margin: 2rem 0;
+            margin: 1.2rem 0;
             @include flexbox(row, center, flex-start);
         }
 
         &-icon-box {
             @include flexbox(row, center, center);
             background-color: $primary-light;
-            min-width: 4.8rem;
-            height: 4.8rem;
+            min-width: 3rem;
+            height: 3rem;
             flex-shrink: 0;
-            border-radius: 1rem;
+            border-radius: 0.6rem;
         }
 
         &-icon {
-            font-size: 2rem;
+            font-size: 1.2rem;
             color: $primary-dark;
             z-index: 1;
         }
 
         &-info {
-            margin-left: 1.5rem;
+            margin-left: 0.9rem;
             text-align: left;
             flex-grow: 1;
         }
 
         &-title, &-description {
-            padding: 0.5rem;
+            padding: 0.3rem;
         }
 
         &-title {
-            font-size: 1.6rem;
             font-weight: 600;
         }
 
         &-description {
-            font-size: 1.5rem;
+            font-size: 0.9rem;
             width: 80%;
             color: $secondary-btn-color;
         }
     }
 }
 
-@media(min-width: 572px) {
+@media(min-width: 576px) {
     .welcome {
         &__title {
-            font-size: 3.5rem;
+            font-size: 2.1rem;
         }
 
         &__description {
-            font-size: 1.7rem;
+            font-size: 1.1rem;
         }
 
         &__rating {
             &-score {
-                font-size: 1.3rem;
+                font-size: 0.8rem;
             }
             &-description {
-                font-size: 1.7rem;
+                font-size: 1.1rem;
             }
         }
 
         &__star {
             &-icon {
-                font-size: 1.3rem;
+                font-size: 0.8rem;
             }
         }
 
@@ -173,44 +172,44 @@
         }
 
         &__title {
-            font-size: 4rem;
-            margin-top: 10rem;
+            font-size: 2.5rem;
+            margin-top: 6.2rem;
         }
 
         &__description {
-            font-size: 2rem;
+            font-size: 1.2rem;
         }
 
         &__rating {
             &-score {
-                font-size: 1.5rem;
+                font-size: 0.9rem;
             }
             &-description {
-                font-size: 2rem;
+                font-size: 1.2rem;
             }
         }
 
         &__star {
             &-icon {
-                font-size: 1.5rem;
+                font-size: 0.9rem;
             }
         }
 
         &__features {
             @include flexbox(row, center, flex-start);
             width: 100%;
-            padding: 1rem;
-            margin: 15rem 0;
+            padding: 0.6rem;
+            margin: 9.3rem 0;
             &-box {
-                margin: 2rem 1rem;
+                margin: 1.2rem 0.6rem;
             }
 
             &-title {
-                font-size: 1.8rem;
+                font-size: 1.2rem;
             }
 
             &-description {
-                font-size: 1.7rem;
+                font-size: 1.1rem;
             }
         }
     }
