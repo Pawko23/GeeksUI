@@ -63,7 +63,6 @@
 
 @media (min-width: 768px) {
     .community {
-
         &__title {
             max-width: 40rem;
         }
@@ -79,6 +78,21 @@
             &-card {
                 max-width: 13rem;
                 margin: 0.9rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .community {
+        &__reviews {
+            max-height: 55rem;
+        }
+
+        &__review {
+            &-card {
+                max-width: 19rem;
+                margin: 0.5rem;
             }
         }
     }
