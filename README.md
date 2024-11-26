@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is built for a personal learning purposes. I am here recreating a Boostrap theme - [Geeks UI](https://geeksui.codescandy.com/index.html?fbclid=IwY2xjawEmsvlleHRuA2FlbQIxMAABHei2utnh7a71sRMc_ahcDLCNX0t2_ArFqL0D0kvCWY9PCoOgVaD5jvAH6g_aem_kdlKv0XCUPLIevjN1pK0hA) - from **Codescandy** in order to improve my front-end development skills. The goal is to replicate the theme's design and functionality as closely as possible with usage of **HTML**, **SASS**, **JavaScript**, followed by **BEM** methodology and **Progressive Enhancement** principles.
+This project is built for a personal learning purposes. I am here recreating a Boostrap theme - [Geeks UI](https://geeksui.codescandy.com/index.html?fbclid=IwY2xjawEmsvlleHRuA2FlbQIxMAABHei2utnh7a71sRMc_ahcDLCNX0t2_ArFqL0D0kvCWY9PCoOgVaD5jvAH6g_aem_kdlKv0XCUPLIevjN1pK0hA) - from **Codescandy** in order to improve my front-end development skills. The goal is to replicate the theme's design and functionality as closely as possible with usage of **HTML**, **SASS**, **JavaScript**, followed by **BEM** methodology and **Progressive Enhancement** principles. The different appearance of the navigation bar is due to the changes that were applied in the original theme during this project development.
 
 ## Purpose
 
@@ -20,5 +20,5 @@ The original theme design and asssets are created by **Codescandy**. I do not cl
 In order to see the look of the web page:
 1. Clone the repo with ```git clone https://github.com/Pawko23/GeeksUI.git```
 2. Install SASS with ```npm install -g sass```
-3. Run ```sass scss/_main.scss:css/main.css``` from the root directory of a project
-5. Open the ```index.html``` file
+3. Run ```sass scss/main.scss:css/main.css``` from the root directory of a project
+4. Open the ```index.html``` file
