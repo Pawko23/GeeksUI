@@ -8,6 +8,7 @@
         width: 80%;
         background-color: $secondary-btn-hover;
         border-radius: 1rem;
+        max-width: 30rem;
     }
 
     &__title, &__description {
@@ -23,5 +24,18 @@
 
     &__description {
         font-size: 1.3rem;
+    }
+
+    &__examples {
+        margin-top: 3rem;
+        @include flexbox(row, center, center);
+        flex-wrap: wrap;
+    }
+
+    &__example {
+        &-image {
+            height: 12.5rem;
+            width: 12.5rem;
+        }
     }
 }
