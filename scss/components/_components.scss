@@ -46,3 +46,12 @@
         font-size: 0.9rem;
     }
 }
+
+@media (min-width: 768px) {
+    .components {
+        &__container {
+            max-width: 49.5rem;
+            width: 90%;
+        }
+    }
+}
