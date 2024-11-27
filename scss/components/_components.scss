@@ -2,10 +2,26 @@
 
 .components {
     @include flexbox(column, center, center);
-
+    margin: 4rem 0;
     &__container {
         @include flexbox(column, center, center);
         width: 80%;
         background-color: $secondary-btn-hover;
+        border-radius: 1rem;
+    }
+
+    &__title, &__description {
+        text-align: center;
+        line-height: 1.5;
+        padding: 1rem 2rem;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        margin-top: 4rem;
+    }
+
+    &__description {
+        font-size: 1.3rem;
     }
 }
