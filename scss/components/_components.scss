@@ -55,3 +55,28 @@
         }
     }
 }
+
+@media (min-width: 992px) {
+    .components {
+
+        &__title {
+            font-size: 1.7rem;
+        }  
+
+        &__description {
+            font-size: 1.5rem;
+        }
+
+        &__container {
+            max-width: 60rem;
+            width: 100%;
+        }
+        
+        &__example {
+            &-image {
+                height: 9rem;
+                width: 9rem;
+            }
+        }
+    }
+}
