@@ -1,5 +1,11 @@
 @use '../abstracts' as *;
 
 .components {
-    
+    @include flexbox(column, center, center);
+
+    &__container {
+        @include flexbox(column, center, center);
+        width: 80%;
+        background-color: $secondary-btn-hover;
+    }
 }
