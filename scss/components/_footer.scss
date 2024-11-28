@@ -13,15 +13,50 @@
         padding-top: 3rem
     }
 
-    &__label {
-        color: $border-color;
-    }
-
     &__title, &__btn-purchase {
         color: $white-default;
     }
 
+    &__title, &__description {
+        text-align: center;
+    }
+
+    &__label, &__title, &__description {
+        padding: 1rem;
+    } 
+
     &__description, &__copyright, &__social-media-link, &__link {
         color: $secondary-btn-color;
+    }
+
+    &__label {
+        color: $border-color;
+        font-size: 0.9rem;
+        border: 0.06rem solid $bg-hover;
+        border-radius: 3rem;
+        line-height: 0;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        width: 90%;
+        font-weight: 500;
+    }
+
+    &__description {
+        font-size: 1.2rem;
+        max-width: 90%;
+    }
+
+    &__btn-purchase {
+        margin: 1rem 0;
+        @include btn-primary(3rem);
+        width: 14rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+
+        &-icon {
+            margin-left: 0.5rem;
+        }
     }
 }
