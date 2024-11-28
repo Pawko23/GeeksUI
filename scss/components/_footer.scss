@@ -1,1 +1,27 @@
 @use '../abstracts' as *;
+
+.footer {
+    height: 60vh;
+    background-color: $footer-bg;
+
+    &__top {
+        padding-top: 5rem;
+    }
+
+    &__top, &__bottom {
+        @include flexbox(column, center, center);
+        padding-top: 3rem
+    }
+
+    &__label {
+        color: $border-color;
+    }
+
+    &__title, &__btn-purchase {
+        color: $white-default;
+    }
+
+    &__description, &__copyright, &__social-media-link, &__link {
+        color: $secondary-btn-color;
+    }
+}
