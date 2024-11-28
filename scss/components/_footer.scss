@@ -17,7 +17,7 @@
         color: $white-default;
     }
 
-    &__title, &__description {
+    &__title, &__description, &__bottom-left {
         text-align: center;
     }
 
@@ -76,9 +76,13 @@
     }
 
     &__bottom {
-        width: 100%;
+        width: 90%;
         &-center, &-right {
             align-self: flex-start;
+        }
+
+        &-left {
+            width: auto;
         }
     }
 
@@ -102,6 +106,21 @@
 
         &:hover {
             color: $primary-color;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        &__title {
+            font-size: 2.7rem;
+        }
+
+        &__bottom {
+            &-left {
+                align-self: flex-start;
+                margin-left: 1.5rem;
+            }
         }
     }
 }
