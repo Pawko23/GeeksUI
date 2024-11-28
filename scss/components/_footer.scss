@@ -1,0 +1,181 @@
+@use '../abstracts' as *;
+
+.footer {
+    height: 70vh;
+    background-color: $footer-bg;
+    @include flexbox(column, center, center);
+    &__top {
+        padding-top: 5rem;
+    }
+
+    &__top, &__bottom {
+        @include flexbox(column, center, center);
+        padding-top: 3rem
+    }
+
+    &__title, &__btn-purchase {
+        color: $white-default;
+    }
+
+    &__title, &__description, &__bottom-left {
+        text-align: center;
+    }
+
+    &__label, &__title, &__description {
+        padding: 1rem;
+    } 
+
+    &__description, &__copyright, &__social-media-link, &__link {
+        color: $secondary-btn-color;
+    }
+
+    &__label {
+        color: $border-color;
+        font-size: 0.9rem;
+        border: 0.06rem solid $bg-hover;
+        border-radius: 3rem;
+        line-height: 0;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        width: 90%;
+        font-weight: 500;
+    }
+
+    &__description {
+        font-size: 1.2rem;
+        max-width: 90%;
+    }
+
+    &__btn-purchase {
+        margin: 1rem 0;
+        @include btn-primary(3rem);
+        width: 14rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+
+        &-icon {
+            margin-left: 0.5rem;
+        }
+    }
+
+
+    &__copyright {
+        &-author {
+            color: $primary-color;
+        }
+    }
+
+    &__social-media, &__links {
+        list-style: none;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__bottom {
+        width: 90%;
+        &-center, &-right {
+            align-self: flex-start;
+        }
+
+        &-left {
+            width: auto;
+        }
+    }
+
+    &__social-media, &__links {
+        display: flex;
+        margin: 1rem 0rem;
+    }
+
+    &__social-media {
+        &-item {
+            margin-left: 1.5rem;
+        }
+    }
+
+    &__link {
+        transition: color 0.3s ease;
+        &-item {
+            margin-left: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        &__title {
+            font-size: 2.7rem;
+        }
+
+        &__bottom {
+            &-left {
+                align-self: flex-start;
+                margin-left: 1.5rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .footer {
+        height: 60vh;
+        &__title {
+            font-size: 2.7rem;
+            width: 100%;
+        }
+
+        &__description {
+            max-width: 100%;
+        }
+
+        &__bottom {
+            max-width: 70rem;
+            @include flexbox(row, center, center);
+            margin: 3rem 0;
+            padding: 1.25rem 0;
+
+            &-left, &-right {
+                flex: 1;
+            }
+
+            &-center {
+                flex: 0.5;
+            }
+        }
+
+        &__copyright {
+            font-size: 0.9rem;
+        }
+
+        &__social-media, &__links {
+            @include flexbox();
+            gap: 0.9rem;
+            margin: 0;
+            padding: 0;
+        }
+    
+        &__social-media, &__link {
+            &-item {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .footer {
+        height: 50vh;
+        &__title {
+            font-size: 3rem;
+        }
+    }
+}
