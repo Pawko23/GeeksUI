@@ -1,9 +1,9 @@
 @use '../abstracts' as *;
 
 .footer {
-    height: 60vh;
+    height: 70vh;
     background-color: $footer-bg;
-
+    @include flexbox(column, center, center);
     &__top {
         padding-top: 5rem;
     }
@@ -57,6 +57,51 @@
 
         &-icon {
             margin-left: 0.5rem;
+        }
+    }
+
+
+    &__copyright {
+        &-author {
+            color: $primary-color;
+        }
+    }
+
+    &__social-media, &__links {
+        list-style: none;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__bottom {
+        width: 100%;
+        &-center, &-right {
+            align-self: flex-start;
+        }
+    }
+
+    &__social-media, &__links {
+        display: flex;
+        margin: 1rem 0rem;
+    }
+
+    &__social-media {
+        &-item {
+            margin-left: 1.5rem;
+        }
+    }
+
+    &__link {
+        transition: color 0.3s ease;
+        &-item {
+            margin-left: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        &:hover {
+            color: $primary-color;
         }
     }
 }
