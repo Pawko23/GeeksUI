@@ -170,3 +170,12 @@
         }
     }
 }
+
+@media (min-width: 1200px) {
+    .footer {
+        height: 50vh;
+        &__title {
+            font-size: 3rem;
+        }
+    }
+}
