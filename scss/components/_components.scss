@@ -1,0 +1,91 @@
+@use '../abstracts' as *;
+
+.components {
+    @include flexbox(column, center, center);
+    margin-top: 4rem;
+    &__container {
+        @include flexbox(column, center, center);
+        width: 80%;
+        background-color: $secondary-btn-hover;
+        border-radius: 1rem;
+        max-width: 30rem;
+    }
+
+    &__title, &__description {
+        text-align: center;
+        line-height: 1.5;
+        padding: 1rem 2rem;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        margin-top: 4rem;
+    }
+
+    &__description {
+        font-size: 1.3rem;
+    }
+
+    &__examples {
+        margin-top: 3rem;
+        @include flexbox(row, center, center);
+        flex-wrap: wrap;
+    }
+
+    &__example {
+        &-image {
+            height: 12.5rem;
+            width: 12.5rem;
+        }
+    }
+
+    &__btn-browse {
+        margin: 5rem;
+        @include btn-primary(0.3rem);
+        width: 12rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .components {
+        &__container {
+            max-width: 49.5rem;
+            width: 90%;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .components {
+
+        &__title {
+            font-size: 1.7rem;
+        }  
+
+        &__description {
+            font-size: 1.5rem;
+        }
+
+        &__container {
+            max-width: 60rem;
+            width: 100%;
+        }
+
+        &__example {
+            &-image {
+                height: 9rem;
+                width: 9rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    .components {
+        &__container {
+            max-width: 70rem;
+            width: 90%;
+        }
+    }
+}
