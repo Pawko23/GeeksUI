@@ -7,36 +7,37 @@
     }
 
     &__offers {
-        margin-top: 7rem;
+        margin-top: 4.3rem;
+        max-width: 31rem;
     }
 
     &__title {
-        font-size: 2.5rem;
+        font-size: 1.6rem;
     }
 
     &__description {
-        font-size: 1.5rem;
-        margin: 1rem 0;
-        line-height: 2.2rem;
+        font-size: 0.9rem;
+        margin: 0.7rem 0;
+        line-height: 1.3rem;
     }
 
     &__card {
         @include flexbox (column, center, center);
         width: 100%;
-        margin: 3rem 0;
+        margin: 1.8rem 0;
         background-color: $secondary-btn-hover;
-        border-radius: 1.6rem;
-        border: 0.1rem solid $card-border;
+        border-radius: 0.6rem;
+        border: 0.06rem solid $card-border;
 
         &-figure {
             width: 90%;
-            padding: 2.3rem 0.1rem;
+            padding: 1.4rem 0.06rem;
         }
 
         &-img {
             width: 100%;
-            box-shadow: 0 0 0.5rem $card-border;
-            border-radius: 0.8rem;
+            box-shadow: 0 0 0.3rem $card-border;
+            border-radius: 0.5rem;
             background-position: center;
             background-size: cover;
             transition: transform 0.3s ease;
@@ -50,21 +51,74 @@
         &-details {
             @include flexbox(row, space-between, center);
             width: 85%;
-            margin-bottom: 2rem;
+            margin-bottom: 1.2rem;
         }
 
         &-title {
             font-weight: 700;
-            font-size: 1.5rem;
+            font-size: 0.9rem;
         }
 
         &-new {
-            padding: 0.3rem 1rem;
-            font-size: 1.1rem;
+            padding: 0.2rem 0.6rem;
+            font-size: 0.7rem;
             background-color: $card-new-feature;
             color: $white-default;
             font-weight: 450;
-            border-radius: 0.5rem;
+            border-radius: 0.3rem;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .landing {
+        
+        &__info {
+            width: 80%;
+        }
+        
+        &__offers {
+            max-width: 44rem;
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .landing {
+        &__info {
+            align-self: flex-start;
+            width: 40vw;
+            margin-left: 5%;
+        }
+        
+        &__offers {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-column-gap: 1.25rem;
+            grid-row-gap: 0.3rem;
+            max-width: 90vw;
+            padding: 1.2rem;
+        }
+
+        &__card {
+            margin: 0.6rem auto;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .landing {
+        margin: 0 auto;
+        width: 80%;
+
+        &__info {
+            margin-left: 0;
+        }
+
+        &__offers {
+            padding: 0;
         }
     }
 }
