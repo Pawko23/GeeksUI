@@ -5,7 +5,7 @@
     margin: 1.8rem 0;
     &__info {
         align-self: flex-start;
-        width: 80vw;
+        width: 80%;
     }
 
     &__info, &__offers {
@@ -62,7 +62,7 @@
 @media(min-width: 768px) {
     .dashboard {
         &__info {
-            width: 90vw;
+            width: 90%;
         }
 
         &__title {
@@ -78,7 +78,7 @@
 @media(min-width: 992px) {
     .dashboard {
         &__info {
-            width: 50vw;
+            width: 50%;
             padding: 0.6rem;
         }
 
@@ -91,13 +91,14 @@
             max-width: 25rem;
             margin: 0.6rem;
         }
+
     }
 }
 
 @media(min-width: 1200px) {
     .dashboard {
         &__info {
-            width: 40vw;
+            width: 40%;
         }
     }
 }
