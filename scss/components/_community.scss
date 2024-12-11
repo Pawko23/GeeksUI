@@ -8,6 +8,10 @@
         width: 65%;
         max-width: 25rem;
         font-size: 1.9rem;
+
+        &--strong {
+            color: $primary-color;
+        }
     }
 
     &__title, &__reviews {
@@ -18,10 +22,6 @@
         max-width: 70%;
         font-size: 1rem;
         @include flexbox(column, center, center);
-    }
-
-    &__stats, &__devs {
-        color: $primary-color;
     }
 
     &__review {
