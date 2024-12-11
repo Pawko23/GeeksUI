@@ -1,0 +1,121 @@
+@use '../abstracts' as *;
+
+.community {
+    @include flexbox(column, center, center);
+    
+    &__title {
+        text-align: center;
+        width: 65%;
+        max-width: 25rem;
+        font-size: 1.9rem;
+
+        &--strong {
+            color: $primary-color;
+        }
+    }
+
+    &__title, &__reviews {
+        margin: 1.2rem auto;
+    }
+
+    &__reviews {
+        max-width: 70%;
+        font-size: 1rem;
+        @include flexbox(column, center, center);
+    }
+
+    &__review {
+        &-card {
+            border: 0.1rem solid $review-card-border;
+            border-radius: 0.6rem;
+            padding: 1.2rem;
+            max-width: 30rem;
+            margin: 1.5rem auto;
+        }
+
+        &-title {
+            margin: 0.9rem 0;
+        }
+
+        &-title, &-author {
+            font-weight: 600;
+        }
+        
+        &-comment {
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        &-feedback {
+            @include flexbox(column, center, flex-start);
+            margin-top: 1rem;
+        }
+
+        &-rating {
+            margin-top: 0.4rem;
+        }
+    }
+
+    &__star-icon {
+        color: $star-color;
+    }
+}
+
+@media (min-width: 768px) {
+    .community {
+        &__title {
+            max-width: 40rem;
+        }
+
+        &__reviews {
+            @include flexbox(column, flex-start, center);
+            flex-wrap: wrap;
+            max-height: 65rem;
+            max-width: 100%;
+        }
+
+        &__review {
+            &-card {
+                max-width: 13rem;
+                margin: 0.9rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .community {
+        &__reviews {
+            max-height: 55rem;
+        }
+
+        &__review {
+            &-card {
+                max-width: 19rem;
+                margin: 0.5rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .community {
+        &__review {
+            &-card {
+                max-width: 22rem;
+                margin: 0.8rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    .community {
+        &__review {
+            &-card {
+                max-width: 25rem;
+                margin: 1rem;
+            }
+        }
+    }
+}
