@@ -1,0 +1,104 @@
+@use '../abstracts' as *;
+
+.dashboard {
+    @include flexbox(column, center, center);
+    margin: 1.8rem 0;
+    &__info {
+        align-self: flex-start;
+        width: 80%;
+    }
+
+    &__info, &__offers {
+        padding: 2.5rem;
+    }
+
+    &__title {
+        font-size: 1.6rem;
+        margin: 0.7rem 0;
+    }
+
+    &__description {
+        font-size: 0.9rem;
+    }
+
+    &__card {
+        @include flexbox (column, center, center);
+        width: 100%;
+        max-width: 34rem;
+        margin: 1.8rem 0;
+        background-color: $secondary-btn-hover;
+        border-radius: 1rem;
+        border: 0.1rem solid $card-border;
+
+        &-figure {
+            width: 90%;
+            padding: 1.4rem 0.1rem;
+        }
+
+        &-img {
+            width: 100%;
+            box-shadow: 0 0 0.3rem $card-border;
+            border-radius: 0.5rem;
+            background-position: center;
+            background-size: cover;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.02);
+                cursor: pointer;
+            }
+        }
+
+        &-title {
+            align-self: flex-start;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin: 0 1.8rem;
+            padding-bottom: 1.2rem;
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    .dashboard {
+        &__info {
+            width: 90%;
+        }
+
+        &__title {
+            font-size: 1.8rem;
+        }
+
+        &__card {
+            max-width: 43rem;
+        }
+    }
+}
+
+@media(min-width: 992px) {
+    .dashboard {
+        &__info {
+            width: 50%;
+            padding: 0.6rem;
+        }
+
+        &__offers {
+            @include flexbox(row, center, center);
+            padding: 2.5rem 0.3rem;
+        }
+
+        &__card {
+            max-width: 25rem;
+            margin: 0.6rem;
+        }
+
+    }
+}
+
+@media(min-width: 1200px) {
+    .dashboard {
+        &__info {
+            width: 40%;
+        }
+    }
+}
