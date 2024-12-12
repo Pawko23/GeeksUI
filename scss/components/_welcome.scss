@@ -6,6 +6,9 @@
     margin: 0 0 1.2rem 0;
     text-align: center;
     width: 100%;
+    background-image: url('../../assets/gradient-svg.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
 
     &__box, &__description {
         padding: 0.6rem;
